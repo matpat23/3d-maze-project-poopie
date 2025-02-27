@@ -9,6 +9,6 @@ public class PlayerTrap : MonoBehaviour
         {
             
         }
-        Destroy(other.gameObject);
+       // Destroy(other.gameObject);
     }
 }
