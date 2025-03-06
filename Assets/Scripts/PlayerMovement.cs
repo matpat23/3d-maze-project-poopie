@@ -14,6 +14,7 @@
           
           // xyz coordinates //
           public Vector3 direction;
+          public Rigidbody playerRb;
           
            //start is called once before the first exectuion of an update after a monoBehaviour id created
             void Start()
@@ -25,7 +26,9 @@
             void Update()
             {
                 // the dot is there to access a functionallity of transform 
-                transform.Translate(direction * Time.deltaTime * speed);
+                // transform.Translate(direction * Time.deltaTime * speed);
+
+                playerRb.linearVelocity = direction * speed;
             }
 
             private void OnMove(InputValue value)
