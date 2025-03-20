@@ -37,6 +37,12 @@ public class Health : MonoBehaviour
          respawnPosition = other.transform.position;
          respawnPosition.y = transform.position.y;
       }
+
+      if (other.CompareTag("Fireball"))
+      {
+         Damage(2);
+         Destroy(other.gameObject);
+      }
       
    }
    // To remove some health points
